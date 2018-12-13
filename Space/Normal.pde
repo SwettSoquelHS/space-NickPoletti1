@@ -3,16 +3,16 @@ class Normal {
   double myY;
   double speed;
   float direction;
-  int r, g, b;
+  int R, G, B;
 
-  public Normal(double myX, double myY, double speed, float direction) {
+  public Normal(double myX, double myY, int R, int G, int B, double speed, float direction) {
     this.myX = myX;
     this.myY = myY;
     this.speed = speed;
     this.direction = direction;
-    r = 200;
-    g = 100;
-    b = 50;
+    this.R = R;
+    this.G = G;
+    this.B = B;
   }
 
   void move() {
@@ -28,16 +28,16 @@ class Normal {
     }else {
       myX = mouseX - Math.random()*20;
       myY = mouseY - Math.random()*20;
-      r = (int)(Math.random()*255);
-      g = (int)(Math.random()*255);
-      b = (int)(Math.random()*255);
+      R = (int)(Math.random()*255);
+      G = (int)(Math.random()*255);
+      B = (int)(Math.random()*255);
     }
   }
 
   void show() {
     pushMatrix();
     translate((float) myX, (float)myY);
-    fill(r, g, b);
+    fill(R, G, B);
     ellipse(0, 0, 5, 5);
     popMatrix();
   }
