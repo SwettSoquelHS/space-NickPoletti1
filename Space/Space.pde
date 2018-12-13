@@ -5,6 +5,7 @@ Jumbo[] parts = new Jumbo[100];
 Oddball theOne;
 
 void setup() {
+  frameRate(60);
   size(600, 600);
   background(0);
   for (int i = 0; i < particles.length; i++) {
